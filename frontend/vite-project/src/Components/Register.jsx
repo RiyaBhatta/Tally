@@ -35,7 +35,7 @@ const Register = () => {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      bgGradient="linear(to-r, #3B82F6, #60A5FA, #93C5FD)"
+      bgGradient="linear(to-r, #780348, #a04160)" // Updated gradient
       padding="10px"
     >
       <Box
@@ -46,85 +46,91 @@ const Register = () => {
         boxShadow="2xl"
         borderRadius="xl"
         border="2px"
-        borderColor="gray.200"
+        borderColor="#780348" // Updated border color
       >
-        <Heading mb={8} textAlign="center" color="blue.500" fontSize="2xl">
+        <Heading mb={8} textAlign="center" color="#780348" fontSize="2xl">
           Create Your Account
         </Heading>
         <Stack spacing={6}>
           <FormControl id="email" isRequired>
-            <FormLabel color="blue.600">Email Address</FormLabel>
+            <FormLabel color="#780348">Email Address</FormLabel>{" "}
+            {/* Updated color */}
             <Input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              bg="blue.50"
+              bg="#fef2f3" // Light pink background
               border="1px"
-              borderColor="blue.300"
-              _hover={{ borderColor: "blue.500" }}
+              borderColor="#780348" // Updated border color
+              _hover={{ borderColor: "#a04160" }} // Updated hover border color
               _focus={{
-                borderColor: "blue.600",
-                boxShadow: "0 0 0 1px blue.600",
+                borderColor: "#a04160", // Updated focus border color
+                boxShadow: "0 0 0 1px #a04160", // Updated focus box shadow color
               }}
               fontStyle="italic"
             />
           </FormControl>
 
           <FormControl id="password" isRequired>
-            <FormLabel color="blue.600">Password</FormLabel>
+            <FormLabel color="#780348">Password</FormLabel>{" "}
+            {/* Updated color */}
             <Input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter your password"
-              bg="blue.50"
+              bg="#fef2f3" // Light pink background
               border="1px"
-              borderColor="blue.300"
-              _hover={{ borderColor: "blue.500" }}
+              borderColor="#780348" // Updated border color
+              _hover={{ borderColor: "#a04160" }} // Updated hover border color
               _focus={{
-                borderColor: "blue.600",
-                boxShadow: "0 0 0 1px blue.600",
+                borderColor: "#a04160", // Updated focus border color
+                boxShadow: "0 0 0 1px #a04160", // Updated focus box shadow color
               }}
               fontStyle="italic"
             />
           </FormControl>
 
           <FormControl id="confirmPassword" isRequired>
-            <FormLabel color="blue.600">Confirm Password</FormLabel>
+            <FormLabel color="#780348">Confirm Password</FormLabel>{" "}
+            {/* Updated color */}
             <Input
-              fontStyle="italic"
               type="password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               placeholder="Confirm your password"
-              bg="blue.50"
+              bg="#fef2f3" // Light pink background
               border="1px"
-              borderColor="blue.300"
-              _hover={{ borderColor: "blue.500" }}
+              borderColor="#780348" // Updated border color
+              _hover={{ borderColor: "#a04160" }} // Updated hover border color
               _focus={{
-                borderColor: "blue.600",
-                boxShadow: "0 0 0 1px blue.600",
+                borderColor: "#a04160", // Updated focus border color
+                boxShadow: "0 0 0 1px #a04160", // Updated focus box shadow color
               }}
+              fontStyle="italic"
             />
           </FormControl>
 
           <Button
-            colorScheme="blue"
+            bg="#780348" // Updated background color
+            color="white"
             onClick={handleSignUp}
             width="full"
             mt={6}
-            _hover={{ bg: "blue.600" }}
-            _active={{ bg: "blue.700" }}
+            _hover={{ bg: "#a04160" }} // Lighter shade for hover
+            _active={{ bg: "#a04160" }} // Lighter shade for active
             size="lg"
             fontStyle="italic"
           >
             Sign Up
           </Button>
 
-          <Text mt={6} textAlign="center" color="blue.600" fontStyle="italic">
+          <Text mt={6} textAlign="center" color="#780348" fontStyle="italic">
             Already have an account?{" "}
-            <Link color="blue.500" href="/login">
+            <Link color="#a04160" href="/login">
+              {" "}
+              {/* Updated color */}
               Login
             </Link>
           </Text>
@@ -135,4 +141,5 @@ const Register = () => {
 };
 
 export default Register;
+
 
