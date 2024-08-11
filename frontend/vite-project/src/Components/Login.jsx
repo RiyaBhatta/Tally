@@ -49,7 +49,7 @@ function LoginPage() {
             size="lg"
             textAlign="center"
             width="100%"
-            color={useColorModeValue("blue.600", "blue.400")}
+            color="#780348" // Updated color
             fontStyle="italic"
           >
             Login to Coding Site
@@ -67,9 +67,9 @@ function LoginPage() {
               bg={useColorModeValue("gray.100", "gray.600")}
               border="1px"
               borderColor={useColorModeValue("gray.300", "gray.500")}
-              focusBorderColor="blue.500"
+              focusBorderColor="#780348" // Updated color
               borderRadius="md"
-              _hover={{ borderColor: "blue.400" }}
+              _hover={{ borderColor: "#780348" }} // Updated color
             />
           </FormControl>
 
@@ -84,9 +84,9 @@ function LoginPage() {
               bg={useColorModeValue("gray.100", "gray.600")}
               border="1px"
               borderColor={useColorModeValue("gray.300", "gray.500")}
-              focusBorderColor="blue.500"
+              focusBorderColor="#780348" // Updated color
               borderRadius="md"
-              _hover={{ borderColor: "blue.400" }}
+              _hover={{ borderColor: "#780348" }} // Updated color
             />
           </FormControl>
 
@@ -94,23 +94,24 @@ function LoginPage() {
             <Checkbox
               isChecked={rememberMe}
               onChange={(e) => setRememberMe(e.target.checked)}
-              colorScheme="blue"
+              colorScheme="pink" // Updated color scheme
             >
               Remember me
             </Checkbox>
-            <Link color="blue.500" href="#">
+            <Link color="#780348" href="#">
               Forgot password?
             </Link>
           </HStack>
 
           <Button
-            colorScheme="blue"
+            bg="#780348" // Updated background color
+            color="white"
             size="lg"
             width="100%"
             onClick={handleLogin}
             borderRadius="md"
-            _hover={{ bg: "blue.600" }}
-            _active={{ bg: "blue.700" }}
+            _hover={{ bg: "#a04160" }} // Lighter shade for hover
+            _active={{ bg: "#a04160" }} // Lighter shade for active
           >
             Login
           </Button>
@@ -121,7 +122,7 @@ function LoginPage() {
             textAlign="center"
           >
             Don't have an account?{" "}
-            <Link color="blue.500" href="/register">
+            <Link color="#780348" href="/register">
               Sign Up
             </Link>
           </Text>
@@ -132,4 +133,5 @@ function LoginPage() {
 }
 
 export default LoginPage;
+
 
