@@ -41,7 +41,7 @@ const DSAQuestions = () => {
         py={4}
         mb={8}
       >
-        <Stack direction="row" spacing={4} justify="center">
+        <Stack direction="row" spacing={4} justify="space-around">
           <Link to="/">
             <Button
               variant="link"
