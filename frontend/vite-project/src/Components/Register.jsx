@@ -9,6 +9,8 @@ import {
   Heading,
   Text,
   Link,
+  VStack,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
@@ -35,23 +37,31 @@ const Register = () => {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      bgGradient="linear(to-r, #780348, #a04160)" // Updated gradient
-      padding="10px"
+      bg={useColorModeValue("gray.50", "gray.800")}
+      py={12}
+      px={6}
     >
       <Box
         maxW="md"
         width="100%"
-        bg="white"
-        p={10}
+        bg={useColorModeValue("white", "gray.700")}
+        p={8}
         boxShadow="2xl"
         borderRadius="xl"
         border="2px"
         borderColor="#780348" // Updated border color
       >
-        <Heading mb={8} textAlign="center" color="#780348" fontSize="2xl">
-          Create Your Account
-        </Heading>
-        <Stack spacing={6}>
+        <VStack spacing={6} align="start" width="100%">
+          <Heading
+            size="lg"
+            textAlign="center"
+            width="100%"
+            color="#780348" // Updated color
+            fontStyle="italic"
+          >
+            Create Your Account
+          </Heading>
+
           <FormControl id="email" isRequired>
             <FormLabel color="#780348">Email Address</FormLabel>{" "}
             {/* Updated color */}
@@ -115,31 +125,33 @@ const Register = () => {
           <Button
             bg="#780348" // Updated background color
             color="white"
+            size="lg"
+            width="100%"
             onClick={handleSignUp}
-            width="full"
-            mt={6}
+            borderRadius="md"
             _hover={{ bg: "#a04160" }} // Lighter shade for hover
             _active={{ bg: "#a04160" }} // Lighter shade for active
-            size="lg"
-            fontStyle="italic"
           >
             Sign Up
           </Button>
 
-          <Text mt={6} textAlign="center" color="#780348" fontStyle="italic">
+          <Text
+            color={useColorModeValue("gray.600", "gray.300")}
+            width="100%"
+            textAlign="center"
+          >
             Already have an account?{" "}
-            <Link color="#a04160" href="/login">
-              {" "}
-              {/* Updated color */}
+            <Link color="#780348" href="/login">
               Login
             </Link>
           </Text>
-        </Stack>
+        </VStack>
       </Box>
     </Box>
   );
 };
 
 export default Register;
+
 
 
