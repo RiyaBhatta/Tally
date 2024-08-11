@@ -39,8 +39,8 @@ const Dashboard = () => {
       {
         label: "Questions Solved",
         data: [10, 20, 15, 30, 25, 35],
-        backgroundColor: "rgba(75,192,192,0.6)",
-        borderColor: "rgba(75,192,192,1)",
+        backgroundColor: "rgba(120, 3, 72, 0.6)", // Dark pink
+        borderColor: "rgba(120, 3, 72, 1)", // Dark pink
         borderWidth: 1,
       },
     ],
@@ -51,17 +51,23 @@ const Dashboard = () => {
     plugins: {
       legend: {
         position: "top",
+        labels: {
+          color: "#780348", // Dark pink
+        },
       },
       title: {
         display: true,
         text: "Questions Solved Over Time",
+        color: "#780348", // Dark pink
       },
     },
   };
 
   return (
     <Box minH="100vh" p={6} bg={useColorModeValue("gray.50", "gray.800")}>
-      <Heading mb={8} textAlign="center">
+      <Heading mb={8} textAlign="center" color="#780348">
+        {" "}
+        {/* Dark pink */}
         Dashboard
       </Heading>
       <Grid templateColumns="repeat(auto-fit, minmax(250px, 1fr))" gap={6}>
@@ -72,23 +78,23 @@ const Dashboard = () => {
             borderRadius="md"
             boxShadow="md"
             border="1px"
-            borderColor={useColorModeValue("gray.200", "gray.700")}
+            borderColor="#780348" // Dark pink
             transition="all 0.3s"
             _hover={{
               boxShadow: "lg",
-              borderColor: useColorModeValue("gray.300", "gray.600"),
+              borderColor: "#a04160", // Lighter pink
             }}
           >
             <Stat>
               <StatLabel
                 fontWeight="bold"
-                color={useColorModeValue("gray.700", "gray.300")}
+                color="#780348" // Dark pink
               >
                 Total Questions Solved
               </StatLabel>
               <StatNumber
                 fontSize="2xl"
-                color={useColorModeValue("blue.600", "blue.300")}
+                color="#780348" // Dark pink
               >
                 150
               </StatNumber>
@@ -106,23 +112,23 @@ const Dashboard = () => {
             borderRadius="md"
             boxShadow="md"
             border="1px"
-            borderColor={useColorModeValue("gray.200", "gray.700")}
+            borderColor="#780348" // Dark pink
             transition="all 0.3s"
             _hover={{
               boxShadow: "lg",
-              borderColor: useColorModeValue("gray.300", "gray.600"),
+              borderColor: "#a04160", // Lighter pink
             }}
           >
             <Stat>
               <StatLabel
                 fontWeight="bold"
-                color={useColorModeValue("gray.700", "gray.300")}
+                color="#780348" // Dark pink
               >
                 Current Streak
               </StatLabel>
               <StatNumber
                 fontSize="2xl"
-                color={useColorModeValue("green.600", "green.300")}
+                color="#780348" // Dark pink
               >
                 7 Days
               </StatNumber>
@@ -139,23 +145,23 @@ const Dashboard = () => {
             borderRadius="md"
             boxShadow="md"
             border="1px"
-            borderColor={useColorModeValue("gray.200", "gray.700")}
+            borderColor="#780348" // Dark pink
             transition="all 0.3s"
             _hover={{
               boxShadow: "lg",
-              borderColor: useColorModeValue("gray.300", "gray.600"),
+              borderColor: "#a04160", // Lighter pink
             }}
           >
             <Stat>
               <StatLabel
                 fontWeight="bold"
-                color={useColorModeValue("gray.700", "gray.300")}
+                color="#780348" // Dark pink
               >
                 Total Points
               </StatLabel>
               <StatNumber
                 fontSize="2xl"
-                color={useColorModeValue("red.600", "red.300")}
+                color="#780348" // Dark pink
               >
                 1200
               </StatNumber>
@@ -173,9 +179,11 @@ const Dashboard = () => {
             borderRadius="md"
             boxShadow="md"
             border="1px"
-            borderColor={useColorModeValue("gray.200", "gray.700")}
+            borderColor="#780348" // Dark pink
           >
-            <Heading size="md" mb={4} textAlign="center">
+            <Heading size="md" mb={4} textAlign="center" color="#780348">
+              {" "}
+              {/* Dark pink */}
               Questions Solved Over Time
             </Heading>
             <Bar data={data} options={options} />
@@ -187,4 +195,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
 
