@@ -32,41 +32,49 @@ function LoginPage() {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      py={12} // Added padding top and bottom for consistent spacing
-      bg={useColorModeValue("#137D9E", "#137D9E")}
+      bg={useColorModeValue("gray.50", "gray.800")}
+      py={12}
+      px={6}
     >
       <Box
         maxW="md"
         width="100%"
-        bg={useColorModeValue("white", "#ccc")}
+        bg={useColorModeValue("white", "gray.700")}
         p={8}
-        boxShadow="lg"
-        borderRadius="lg"
-        mt={-20} // Added negative margin to pull the box closer to the top
+        boxShadow="2xl"
+        borderRadius="xl"
       >
-        <VStack spacing={6} align="start">
-          <Heading size="lg" color={useColorModeValue("#137D9E", "#137D9E")}>
+        <VStack spacing={6} align="start" width="100%">
+          <Heading
+            size="lg"
+            textAlign="center"
+            width="100%"
+            color={useColorModeValue("blue.600", "blue.400")}
+            fontStyle="italic"
+          >
             Login to Coding Site
           </Heading>
 
-          <FormControl id="username">
-            <FormLabel color={useColorModeValue("gray.600", "gray.300")}>
+          <FormControl id="username" isRequired>
+            <FormLabel color={useColorModeValue("gray.700", "gray.300")}>
               Username
             </FormLabel>
             <Input
               type="text"
               value={username}
+              fontStyle="italic"
               onChange={(e) => setUsername(e.target.value)}
               bg={useColorModeValue("gray.100", "gray.600")}
-              border="none"
+              border="1px"
+              borderColor={useColorModeValue("gray.300", "gray.500")}
               focusBorderColor="blue.500"
               borderRadius="md"
-              _hover={{ bg: useColorModeValue("gray.200", "gray.500") }}
+              _hover={{ borderColor: "blue.400" }}
             />
           </FormControl>
 
-          <FormControl id="password">
-            <FormLabel color={useColorModeValue("gray.600", "gray.300")}>
+          <FormControl id="password" isRequired>
+            <FormLabel color={useColorModeValue("gray.700", "gray.300")}>
               Password
             </FormLabel>
             <Input
@@ -74,10 +82,11 @@ function LoginPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               bg={useColorModeValue("gray.100", "gray.600")}
-              border="none"
+              border="1px"
+              borderColor={useColorModeValue("gray.300", "gray.500")}
               focusBorderColor="blue.500"
               borderRadius="md"
-              _hover={{ bg: useColorModeValue("gray.200", "gray.500") }}
+              _hover={{ borderColor: "blue.400" }}
             />
           </FormControl>
 
@@ -89,7 +98,7 @@ function LoginPage() {
             >
               Remember me
             </Checkbox>
-            <Link color="#137D9E" href="#">
+            <Link color="blue.500" href="#">
               Forgot password?
             </Link>
           </HStack>
@@ -100,13 +109,19 @@ function LoginPage() {
             width="100%"
             onClick={handleLogin}
             borderRadius="md"
+            _hover={{ bg: "blue.600" }}
+            _active={{ bg: "blue.700" }}
           >
             Login
           </Button>
 
-          <Text color={useColorModeValue("gray.600", "gray.300")} mt={4}>
+          <Text
+            color={useColorModeValue("gray.600", "gray.300")}
+            width="100%"
+            textAlign="center"
+          >
             Don't have an account?{" "}
-            <Link color="#137D9E" href="/signin">
+            <Link color="blue.500" href="/register">
               Sign Up
             </Link>
           </Text>
@@ -117,3 +132,4 @@ function LoginPage() {
 }
 
 export default LoginPage;
+
