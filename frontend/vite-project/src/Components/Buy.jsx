@@ -15,7 +15,11 @@ const Avatar = ({ name, src, onImageUpload }) => {
   return (
     <Box display="flex" flexDirection="column" alignItems="center">
       <ChakraAvatar name={name} src={src} size="xl" />
-      {name && <Text mt={2}>{name}</Text>}
+      {name && (
+        <Text mt={2} color="#780348">
+          {name}
+        </Text>
+      )}
       <Input
         type="file"
         accept="image/*"
@@ -28,8 +32,10 @@ const Avatar = ({ name, src, onImageUpload }) => {
         as="label"
         htmlFor="upload-avatar"
         mt={2}
-        colorScheme="blue"
+        colorScheme="pink"
         size="sm"
+        backgroundColor="#780348"
+        _hover={{ backgroundColor: "#5e002e" }} // Darker shade for hover
       >
         Upload Picture
       </Button>
@@ -58,10 +64,12 @@ const BuyPremium = () => {
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      bg={useColorModeValue("gray.100", "gray.800")}
+      bg="#f9f9f9" // Light background color
       p={4}
     >
-      <Heading mb={6}>Buy Premium</Heading>
+      <Heading mb={6} color="#780348">
+        Buy Premium
+      </Heading>
       <Stack spacing={8} align="center">
         <Avatar
           name="Premium User"
@@ -76,17 +84,23 @@ const BuyPremium = () => {
           maxW="lg"
           textAlign="center"
         >
-          <Heading size="lg" mb={4}>
+          <Heading size="lg" mb={4} color="#780348">
             Unlock Premium Features
           </Heading>
-          <Text mb={4}>
+          <Text mb={4} color="#780348">
             Upgrade to premium to access exclusive content, advanced features,
             and more!
           </Text>
-          <Text mb={6} fontSize="xl" fontWeight="bold">
+          <Text mb={6} fontSize="xl" fontWeight="bold" color="#780348">
             $19.99 per month
           </Text>
-          <Button colorScheme="blue" size="lg">
+          <Button
+            colorScheme="pink"
+            size="lg"
+            backgroundColor="#780348"
+            color="white"
+            _hover={{ backgroundColor: "#5e002e" }} // Darker shade for hover
+          >
             Buy Now
           </Button>
         </Box>
